@@ -1,0 +1,20 @@
+spring:
+  rabbitmq:
+    host: 175.178.29.193
+    port: 5672
+    username: root
+    password: an4869
+    publisher-returns: true
+    publisher-confirm-type: CORRELATED
+    listener:
+      type: direct
+      direct:
+        acknowledge-mode: manual
+        retry:
+          enabled: true
+    template:
+      retry:
+        enabled: true
+  kafka:
+    bootstrap-servers:
+      - 175.178.29.193:9092
