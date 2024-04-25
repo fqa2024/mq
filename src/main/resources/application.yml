@@ -18,3 +18,18 @@ spring:
   kafka:
     bootstrap-servers:
       - 175.178.29.193:9092
+    producer:
+      retries: 0
+      batch-size: 4096
+      buffer-memory: 40960
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      bootstrap-servers:
+        - 175.178.29.193:9092
+      enable-auto-commit: true
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: test
+      auto-offset-reset: latest
