@@ -17,7 +17,9 @@ spring:
         enabled: true
   kafka:
     bootstrap-servers:
-      - 175.178.29.193:9092
+      - 175.178.29.193:19092
+      - 175.178.29.193:29092
+      - 175.178.29.193:39092
     producer:
       retries: 0
       batch-size: 4096
@@ -26,7 +28,9 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
       bootstrap-servers:
-        - 175.178.29.193:9092
+        - 175.178.29.193:19092
+        - 175.178.29.193:29092
+        - 175.178.29.193:39092
       enable-auto-commit: true
       auto-commit-interval: 100
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer

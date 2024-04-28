@@ -14,6 +14,6 @@ public class KafkaProducer {
 
     @GetMapping("/kafka/send/{message}")
     public void sendMessage(@PathVariable String message) {
-        kafkaTemplate.send("kTopic",null,message);
+        kafkaTemplate.send("foo",null,message);
     }
 }
