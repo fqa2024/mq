@@ -37,3 +37,10 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       group-id: test
       auto-offset-reset: latest
+rocketmq:
+  name-server: 175.178.29.193:9876
+  producer:
+    group: orderProducerGroup
+  consumer:
+    group: orderTopic_shop_goods
+    topic: orderTopic
